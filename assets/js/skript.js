@@ -8,7 +8,7 @@ var password = "";
 
 var genPassword = function () {
 
-     questOne = window.confirm("Would you like to include lower case letters in your password");
+     questOne = window.confirm("Would you like to include lower case letters in your password? Press 'OK' for yes and 'Cancel' for no");
      if (questOne == true) {
           lowerLetter = lowerLetter;
      }
@@ -16,7 +16,7 @@ var genPassword = function () {
           lowerLetter = "";
      };
 
-     questTwo = window.confirm("Would you like to include upper case letters in your password");
+     questTwo = window.confirm("Would you like to include upper case letters in your password? Press 'OK' for yes and 'Cancel' for no");
      if (questTwo == true) {
           upperLetter = upperLetter
      }
@@ -24,7 +24,7 @@ var genPassword = function () {
           upperLetter = "";
      }
 
-     questThree = window.confirm("Would you like to include numbers in your password");
+     questThree = window.confirm("Would you like to include numbers in your password? Press 'OK' for yes and 'Cancel' for no");
      if (questThree == true) {
           numbers = numbers;
      }
@@ -33,7 +33,7 @@ var genPassword = function () {
      }
 
 
-     questFour = window.confirm("Would you like to include special characters in your password");
+     questFour = window.confirm("Would you like to include special characters in your password? Press 'OK' for yes and 'Cancel' for no");
      if (questFour == true) {
           characters = characters;
      }
@@ -42,22 +42,22 @@ var genPassword = function () {
      }
 
      questFive = window.prompt("How long would you like your password to be? Please select number between 8 and 128");
-     passLength = questFive;
+     passLength = questFive; 
      console.log(passLength);
 
      passwordPool = lowerLetter + upperLetter + numbers + characters;
-   
+
      console.log(passwordPool);
 
-     var charPos = function(){
+     var charPos = function () {
           for (var i = 0; i <= passLength; i++) {
                password = password + passwordPool.charAt(Math.floor(Math.random() * Math.floor(passwordPool.length - 1)));
                console.log("password", password);
           }
      }
      charPos();
-     document.getElementById("password").innerHTML = (password );
-     
+     document.getElementById("password").innerHTML = (password);
+
 }
 document.getElementById("generate").addEventListener("click", genPassword);
 
