@@ -7,6 +7,8 @@ Genarate random password. User is asked which parameter they want to select for 
 ## Built With
 * HTML
 * CSS
+* JS
+* JS DOM
 
 
 ## Website
